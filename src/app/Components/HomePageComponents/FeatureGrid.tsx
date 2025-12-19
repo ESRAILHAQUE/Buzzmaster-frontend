@@ -7,35 +7,35 @@ const features = [
     title: "Instant delivery",
     description: "Get your accounts immediately after purchase—no waiting.",
     Icon: IconBolt,
-    color: "text-indigo-600",
-    bg: "bg-indigo-50",
+    color: "text-[#24362C]",
+    bg: "bg-[#628141]/15",
   },
   {
     title: "Secure payment",
     description: "Encrypted checkout with modern fraud protection built-in.",
     Icon: IconShield,
-    color: "text-cyan-700",
-    bg: "bg-cyan-50",
+    color: "text-[#24362C]",
+    bg: "bg-[#628141]/15",
   },
   {
     title: "Quality guaranteed",
     description: "Verified inventory with clear stock and transparent rules.",
     Icon: IconCheckBadge,
-    color: "text-emerald-700",
-    bg: "bg-emerald-50",
+    color: "text-[#24362C]",
+    bg: "bg-[#628141]/15",
   },
   {
     title: "24/7 support",
     description: "Fast responses when you need help—any time, any device.",
     Icon: IconChat,
-    color: "text-violet-700",
-    bg: "bg-violet-50",
+    color: "text-[#24362C]",
+    bg: "bg-[#628141]/15",
   },
 ] as const;
 
 export default function FeatureGrid() {
   return (
-    <section className="bg-white py-12 sm:py-16">
+    <section className="bg-[#f4f8f5] py-12 sm:py-16">
       <Container>
         <SectionHeader
           eyebrow="Why Buzzmaster"
@@ -47,14 +47,14 @@ export default function FeatureGrid() {
           {features.map(({ title, description, Icon, color, bg }) => (
             <div
               key={title}
-              className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+              className="rounded-sm border border-[#628141]/20 bg-white p-5 shadow-sm"
             >
               <div
-                className={`grid h-11 w-11 place-items-center rounded-xl ${bg}`}
+                className={`grid h-11 w-11 place-items-center rounded-sm ring-1 ring-[#628141]/20 ${bg}`}
               >
                 <Icon className={`h-6 w-6 ${color}`} />
               </div>
-              <h3 className="mt-4 text-sm font-semibold text-slate-900">
+              <h3 className="mt-4 text-sm font-semibold text-[#24362C]">
                 {title}
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">

@@ -4,18 +4,15 @@ import { IconSparkles } from "./Icons";
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-950">
+    <section className="relative overflow-hidden bg-[#0b1f14]">
       <div className="pointer-events-none absolute inset-0 opacity-70">
-        <div className="absolute -top-24 left-1/2 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-indigo-500/20 blur-3xl" />
-        <div className="absolute -bottom-36 left-1/3 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
+        <div className="absolute -top-24 left-1/2 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-emerald-200/20 blur-3xl" />
+        <div className="absolute -bottom-36 left-1/3 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-lime-200/15 blur-3xl" />
       </div>
 
       <Container>
         <div className="relative py-14 sm:py-20">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-white/80">
-            <IconSparkles className="h-4 w-4 text-white/80" />
-            <span>Instant delivery • Secure checkout • 24/7 support</span>
-          </div>
+
 
           <div className="mt-6 grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
@@ -31,48 +28,23 @@ export default function HeroSection() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
                 <a
                   href="#products"
-                  className="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-100"
+                  className="inline-flex items-center justify-center rounded-sm bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-100"
                 >
                   Browse products
                 </a>
                 <Link
                   href="/signup"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-sm border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
                 >
                   Create an account
                 </Link>
               </div>
 
-              <dl className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-                    Avg. delivery
-                  </dt>
-                  <dd className="mt-2 text-2xl font-semibold text-white">
-                    &lt; 2 min
-                  </dd>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-                    Refund policy
-                  </dt>
-                  <dd className="mt-2 text-2xl font-semibold text-white">
-                    Clear & fair
-                  </dd>
-                </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-                    Support
-                  </dt>
-                  <dd className="mt-2 text-2xl font-semibold text-white">
-                    24/7
-                  </dd>
-                </div>
-              </dl>
+
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
+              <div className="rounded-sm border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
                 <p className="text-sm font-semibold text-white">Today’s offer</p>
                 <p className="mt-2 text-2xl font-semibold tracking-tight text-white">
                   Seasonal bonus credits
@@ -89,7 +61,7 @@ export default function HeroSection() {
                   ].map((r) => (
                     <div
                       key={r.amount}
-                      className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
+                      className="flex items-center justify-between rounded-sm border border-white/10 bg-white/5 px-4 py-3 text-sm text-white"
                     >
                       <span className="font-semibold">{r.amount} recharge</span>
                       <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-900">
