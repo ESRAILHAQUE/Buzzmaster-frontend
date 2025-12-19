@@ -1,0 +1,88 @@
+.outer {
+  position: absolute;
+  inset: -18px;
+  pointer-events: none;
+  z-index: 0;
+  --mx: 50%;
+  --my: 35%;
+  --boost: 1;
+}
+
+.outer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(280px 240px at var(--mx) var(--my), rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0) 62%),
+    radial-gradient(220px 200px at calc(var(--mx) + 10%) calc(var(--my) + 8%), rgba(163, 230, 53, 0.18), rgba(255, 255, 255, 0) 70%);
+  opacity: 0.55;
+  filter: blur(0.2px);
+}
+
+.active {
+  --boost: 1.75;
+}
+
+.star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 999px;
+  opacity: calc(var(--o) * var(--boost));
+  background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.35) 55%, rgba(255, 255, 255, 0) 78%);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.25))
+    drop-shadow(0 0 18px rgba(163, 230, 53, 0.16));
+
+  transform: translate3d(-50%, -50%, 0) rotate(var(--a)) translateX(var(--r));
+  will-change: transform, opacity;
+  animation:
+    orbit var(--d) linear infinite,
+    glint var(--gd) ease-in-out infinite;
+  animation-delay: var(--delay), var(--gDelay);
+}
+
+.star::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: calc(var(--s) * 4.2);
+  height: calc(var(--s) * 0.9);
+  transform: translate(-50%, -50%) rotate(22deg);
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0));
+  opacity: 0.25;
+  filter: blur(0.6px);
+}
+
+@keyframes orbit {
+  to {
+    transform: translate3d(-50%, -50%, 0) rotate(calc(var(--a) + 360deg)) translateX(var(--r));
+  }
+}
+
+@keyframes glint {
+  0%,
+  100% {
+    opacity: calc(var(--o) * var(--boost) * 0.75);
+    transform: translate3d(-50%, -50%, 0) rotate(var(--a)) translateX(var(--r)) scale(0.92);
+  }
+  50% {
+    opacity: calc(var(--o) * var(--boost));
+    transform: translate3d(-50%, -50%, 0) rotate(var(--a)) translateX(var(--r)) scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none !important;
+    opacity: 0.16 !important;
+  }
+  .outer::before {
+    opacity: 0.25 !important;
+  }
+}
+
+
