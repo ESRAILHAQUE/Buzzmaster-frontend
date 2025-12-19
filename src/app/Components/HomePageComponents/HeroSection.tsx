@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Container from "./Container";
-import { IconSparkles } from "./Icons";
 
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-[#0b1f14]">
       <div className="pointer-events-none absolute inset-0 opacity-70">
-        <div className="absolute -top-24 left-1/2 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-emerald-200/20 blur-3xl" />
-        <div className="absolute -bottom-36 left-1/3 h-72 w-[46rem] -translate-x-1/2 rounded-full bg-lime-200/15 blur-3xl" />
+        <div className="absolute -top-24 left-1/2 h-72 w-184 -translate-x-1/2 rounded-full bg-emerald-200/20 blur-3xl" />
+        <div className="absolute -bottom-36 left-1/3 h-72 w-184 -translate-x-1/2 rounded-full bg-lime-200/15 blur-3xl" />
       </div>
 
       <Container>
@@ -20,9 +19,9 @@ export default function HeroSection() {
                 Premium Email Accounts, delivered instantly.
               </h1>
               <p className="mt-4 max-w-2xl text-pretty text-base leading-7 text-white/70 sm:text-lg">
-                Buy verified accounts with transparent stock, simple pricing,
-                and a checkout experience built for speed. No clutter—just a
-                clean dashboard and fast fulfillment.
+                We sell premium email accounts with verified quality, clear
+                stock availability, and fast delivery. Buy confidently with a
+                smooth checkout and responsive support.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -44,7 +43,7 @@ export default function HeroSection() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-sm border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
+              <div className="rounded-sm border border-white/10 bg-linear-to-b from-white/10 to-white/5 p-6 shadow-[0_0_0_1px_rgba(255,255,255,0.05)]">
                 <p className="text-sm font-semibold text-white">Today’s offer</p>
                 <p className="mt-2 text-2xl font-semibold tracking-tight text-white">
                   Seasonal bonus credits
